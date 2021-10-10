@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
 * {
     margin: 0;
     padding: 0;
@@ -66,12 +67,172 @@ a {
     font-weight: 500;
     color: #010105;
 }
+.openmodal{
+    left: 600px;
+    padding: 8px 15px;
+    text-decoration: none;
+    text-align: center;
+    transition: color .1s ease;
+    background: grey;
+    border-radius: 3px;
+    color: #fff;
+}
+.btn {
+    background: grey;
+    border-radius: 3px;
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 15px;
+    text-decoration: none;
+    text-align: center;
+    min-width: 60px;
+    position: relative;
+    transition: color .1s ease;
+  }
+  .btn:hover {
+    background: gray;
+  }
+  .btn.btn-big {
+    font-size: 18px;
+    padding: 15px 20px;
+    min-width: 100px;
+  }
+  .btn-close {
+    color: grey;
+    font-size: 30px;
+    text-decoration: none;
+    padding:10px;
+    position: absolute;
+    right: 7px;
+    top: 0;
+  }
+  .btn-close:hover {
+    color: #333;
+  }
+  .modal:before {
+    content: "";
+    display: none;
+    background: rgba(87, 86, 86, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+  .opened:before {
+    display: block;
+  }
+  .opened .modal-dialog {
+    transform: translate(0, 0);
+    top: 20%;
+  }
+  .modal-dialog {
+    background: #fefefe;
+    border: #333333 solid 0px;
+    border-radius: 5px;
+    margin-left: -200px;
+    text-align:center;
+    position: fixed;
+    left: 600px;
+    top: -100%;
+    z-index: 11;
+    width: 600px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.3);
+    transform: translate(0, -500%);
+    transition: transform 0.3s ease-out;
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+  }
+  .modal-body {
+    padding-left: 10rem;
+
+  }
+  td{
+      font-weight: bold;
+      font-size: 16px;
+  }
+  .modal-body input{
+    width:200px;
+    padding:8px;
+    border:1px solid #ddd;
+    color:#010105;
+    outline:0;
+    font-size:14px;
+    font-weight:bold;
+    margin-top: 10px;
+  }
+  .modal-header,
+  .modal-footer {
+    padding: 20px 20px;
+  }
+  .modal-header {
+    border-bottom: #eeeeee solid 1px;
+  }
+  .modal-header h2 {
+    font-size: 20px;
+  }
+  #des{
+    text-align: center;
+    margin: 2rem 0;
+    padding-bottom: 20px;
+    font-size: 2.5rem;
+}
 h1 {
     text-align: center;
     margin: 2rem 0;
     font-size: 4rem;
   }
-  
+  ul li {  margin: 0;
+    padding: 0;list-style:none}
+
+.slider {
+    display: block;
+    height: 200px;
+    width: 1000px;
+    margin: auto;
+    border: 12px #5B84B1FF solid;
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
+    box-shadow: 0px 0px 5px rgba(0,0,0,.8);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    position: relative;
+
+}
+
+.slider ul{  
+    display: block;
+    height: auto;
+    max-width: 640px;
+    overflow:hidden}
+
+.slider>ul>li {
+    height: 320px;
+    float: left;
+    position: absolute;
+}
+
+.slider >ul>li>img {
+    margin: auto;
+    height: 100%;
+}
+
+.desc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 260px;
+    font-family: 'Yanone Kaffeesatz';
+    z-index: 1000;
+     background-color: rgba(255,255,240,0.5);
+    display: inline-block;
+    text-align: center;
+    padding-top: 7px;
+    border-bottom-right-radius: 15px;
+}
+
   .accordion {
     width: 90%;
     max-width: 1000px;
@@ -161,8 +322,7 @@ h1 {
 }
 .footer-item .social-links a:hover{
     color: black;
-}
-
+}  
 @media only screen and (max-width: 768px) {
     .nav-menu {
         position: fixed;
@@ -205,5 +365,4 @@ h1 {
         width: 100%;
         padding: 0 13px;
     }
-
 }
