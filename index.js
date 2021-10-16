@@ -157,31 +157,3 @@ time.controller('myCtrl', function($scope, $interval) {
 }, 1000);
 });
 
-//angular
-/*var app = angular.module("myApp", ['ngRoute']);
-app.config(['$routeProvider',function ($routeProvider) {
-$routeProvider.when('/', {
-templateUrl: 'title.html',
-}).when('/Author', {
-templateUrl: 'author.html',
-}).when('/Publication', {
-  templateUrl: 'publiction.html',
-});
-}]);*/
-/*
-var app = angular.module("myApp", ["ngRoute"]);
-app.config(function($routeProvider) {
- $routeProvider
-.when("/Title", {
-templateUrl : "<h1>london</h1><p>Bananas contain around 75% water.</p>",
-})
-.when("/Author", {
-template : "<h1>london</h1><p>Bananas contain around 75% water.</p>"
-})
-.when("/Publication", {
-template : "<h1>paris</h1><p>Bananas contain around 75% water.</p>"
-})
-.otherwise("/",{
-  template : "<h1>Hello</h1><p>Bananas contain around 75% water.</p>"
-})
-});*/
