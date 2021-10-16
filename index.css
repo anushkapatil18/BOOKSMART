@@ -68,7 +68,7 @@ a {
     color: #010105;
 }
 .openmodal{
-    left: 600px;
+    left: 45%;
     padding: 8px 15px;
     text-decoration: none;
     text-align: center;
@@ -232,7 +232,68 @@ h1 {
     padding-top: 7px;
     border-bottom-right-radius: 15px;
 }
+.book{
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+}
+.mark{
+  font-size: 24px;
+}
+.total{
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+  margin:10%;
+  padding: 20px;
+  background-color: #457b9d;
+  font-size: 20px;
+  border-radius: 12px;
+}
+.title1{
+  font-weight: 900;
+  font-size: 30px;
+}
+.general .book_info{
+  justify-content: center;
+}
+.list{
+  padding: 25px;
+}
+hr{
+  color: #34495e;
+  height: 2px;
+}
+.test{
+  border: none;
+  background-color: #457b9d;
+  font-size: 24px;
+  justify-content: space-around;
+}
+.test:hover{
+  color: white
+}
+.time{
+  font-size: 16px;
+}
+.data{
+  padding-left: 20%;
+  font-size: 20px;
 
+}
+#result {
+  position: absolute;
+  width: 100%;
+  max-width:870px;
+  cursor: pointer;
+  overflow-y: auto;
+  max-height: 400px;
+  box-sizing: border-box;
+  z-index: 1001;
+ }
+ .link-class:hover{
+  background-color:#c0b5b5;
+ }
   .accordion {
     width: 90%;
     max-width: 1000px;
@@ -336,7 +397,12 @@ h1 {
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     }
-
+     .slider{
+       display: none;
+     }
+    .openmodal{
+      left: 40%;
+    }
     .nav-menu.active {
         left: 0;
     }

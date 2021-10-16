@@ -110,3 +110,78 @@ var j = 0;
    cycleThru();
 
 });
+
+//ajax
+var x="";
+$(document).ready(function(){
+  $(".test1").click(function(){
+    $.get("data.json", function(data){
+      for(i in data.name){
+        x += data.name[i]+"<br/>"
+      }
+      document.getElementById("txt").innerHTML="<h3>Title: </h3><br/>"+x;
+    });
+  });
+});
+
+var y="";
+$(document).ready(function(){
+  $(".test2").click(function(){
+    $.get("data.json", function(data){
+      for(i in data.author){
+        y += data.author[i]+"<br/>"
+      }
+      document.getElementById("txt").innerHTML="<h3>Authors: </h3><br/>"+y;
+    });
+  });
+});
+
+var z="";
+$(document).ready(function(){
+  $(".test3").click(function(){
+    $.get("data.json", function(data){
+      for(i in data.publication){
+        z += data.publication[i]+"<br/>"
+      }
+      document.getElementById("txt").innerHTML="<h3>Publications: </h3><br/>"+z;
+    });
+  });
+});
+
+//angular
+var time = angular.module('myApp', []);
+time.controller('myCtrl', function($scope, $interval) {
+ $scope.theTime = new Date().toLocaleTimeString();
+ $interval(function () {
+ $scope.theTime = new Date().toLocaleTimeString();
+}, 1000);
+});
+
+//angular
+/*var app = angular.module("myApp", ['ngRoute']);
+app.config(['$routeProvider',function ($routeProvider) {
+$routeProvider.when('/', {
+templateUrl: 'title.html',
+}).when('/Author', {
+templateUrl: 'author.html',
+}).when('/Publication', {
+  templateUrl: 'publiction.html',
+});
+}]);*/
+/*
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+ $routeProvider
+.when("/Title", {
+templateUrl : "<h1>london</h1><p>Bananas contain around 75% water.</p>",
+})
+.when("/Author", {
+template : "<h1>london</h1><p>Bananas contain around 75% water.</p>"
+})
+.when("/Publication", {
+template : "<h1>paris</h1><p>Bananas contain around 75% water.</p>"
+})
+.otherwise("/",{
+  template : "<h1>Hello</h1><p>Bananas contain around 75% water.</p>"
+})
+});*/

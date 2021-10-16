@@ -7,8 +7,12 @@
         <link rel="stylesheet" href="index.css">
         <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     </head>
-    <body>
+    <body ng-app="myApp" ng-controller="myCtrl">
         <header class="header">
             <nav class="navbar">
                 <a href="#" class="nav-logo">BOOKSMART&nbsp;<i class="fas fa-book-open"></i></a>
@@ -44,28 +48,28 @@
             <table>
             <tr>
             <td>Full Name:</td>
-            <td><input name="name" id="name" type="text" maxlength="30"></td>
+            <td><input name="name" id="name" type="text" maxlength="30" ng-model="name"></td>
             </tr>
             <tr>
             <td>E-Mail ID:</td>
-            <td><input id="email" type="email"></td>
+            <td><input id="email" type="email" ng-model="email"></td>
             </tr>
             <tr>
             <td>Date of Birth:</td>
-            <td><input id="dob" type="date"></td>
+            <td><input id="dob" type="date" ng-model="dob"></td>
             </tr>
             <tr>
             <td>Age:</td>
-            <td><input id="age" type="number"></td>
+            <td><input id="age" type="number" ng-model="age"></td>
             </tr>
             <tr>
-              <td>Phone Number:</td><td><input id="phoneno" type="number" maxlength="10"></td>
+              <td>Phone Number:</td><td><input id="phoneno" type="number" maxlength="10" ng-model="phno"></td>
               </tr>
             <tr>
-            <td>Address:</td><td><input id="tempadd" type="text"></td>
+            <td>Address:</td><td><input id="tempadd" type="text" ng-model="address"></td>
             </tr>
             <tr>
-              <td>ZipCode:</td><td><input id="zipcode" type="number" maxlength="6"></td>
+              <td>ZipCode:</td><td><input id="zipcode" type="number" maxlength="6" ng-model="zipcode"></td>
               </tr>
             </table>
             </form>
@@ -78,23 +82,23 @@
           <table>
           <tr>
           <td>Title:</td>
-          <td><input name="title" id="title" type="text" maxlength="50"></td>
+          <td><input name="title" id="title" type="text" maxlength="50" ng-model="title"></td>
           </tr>
           <tr>
           <td>ISBN number:</td>
-          <td><input id="isbn" type="number" maxlength="10"></td>
+          <td><input id="isbn" type="number" maxlength="10" ng-model="isbn"></td>
           </tr>
           <tr>
-          <td>Copy:</td><td><input id="copy" type="number"></td>
+          <td>Copy:</td><td><input id="copy" type="number" ng-model="copy"></td>
           </tr>
           <tr>
-            <td>Price:</td><td><input id="price" type="number"></td>
+            <td>Price:</td><td><input id="price" type="number" ng-model="price"></td>
             </tr>
             <tr>
-              <td>Date of purchase:</td><td><input id="date" type="date"></td>
+              <td>Date of purchase:</td><td><input id="date" type="date" ng-model="date"></td>
               </tr>
               <tr>
-                <td>Language:</td><td><select multiple='yes'>
+                <td>Language:</td><td><select multiple='yes' ng-model="lan">
                   <option>English</option>
                   <option>Hindi</option>
                   <option>Marathi</option>
@@ -108,15 +112,51 @@
           </form>
       </div>
         <div class="modal-footer">
-          <a href="#" class="btn closemodal" onclick="validate();">Login</a>
+          <a href="#" class="btn closemodal">Login</a>
         </div>
       </div>
     </div>
-     
+    <div class="time">
+      <span>The time is: {{theTime}}</span>
+      </div>
       <h2 id="des">To submit your general and book details click the button</h2>
-      <p><a href="#" class="btn btn-big openmodal">Open Form</a></p>
-      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<br><br>
+      <p><a href="#" class="btn btn-big openmodal">Open Form</a></p><br><br>
+      <div class="total">
+      <button class="test1 test">Books Title</button>
+      <button class="test2 test">Books Authors</button>
+      <button class="test3 test">Books Publications</button>
+    </div>
+    <div class="data">
+      <div id="txt"></div>
+    </div>
+<main>
+  <div class="total">
+    <div class="general">
+        <p class="title1">Your Information</p>
+        <hr/>
+        <ul class="list">
+          <li>Name: {{name}}</li>
+          <li>Date of birth: {{dob}}</li>
+          <li>Age: {{age}}</li>
+          <li>Phone number: {{phno}}</li>
+          <li>Address: {{address}}</li>
+          <li>ZipCode: {{zipcode}}</li>
+        </ul>
+    </div>
+    <div class="book_info">
+      <p class="title1">Book Information</p>
+      <hr/>
+      <ul class="list">
+          <li>Title: {{title}}</li>
+          <li>ISBN no: {{isbn}}</li>
+          <li>No of Copies: {{copy}}</li>
+          <li>Price: {{price}}</li>
+          <li>Date of Purchase: {{date}}</li>
+          <li>Language: {{lan}}</li>
+        </ul>
+    </div>
+  </div>
+</main>
 <div class="slider"></div>
 <br><br>
     <h1>FAQ</h1>
