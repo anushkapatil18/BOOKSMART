@@ -157,3 +157,35 @@ time.controller('myCtrl', function($scope, $interval) {
 }, 1000);
 });
 
+$(document).ready(function () {
+  $("#submit").click(function () {
+  details = [
+  {
+  "name": $("#name").val(),
+  "address":$("#address").val(),
+  "zipcode":$("#zipcode").val(),
+   "title":$("#title").val(),
+   "isbn":$("#isbn").val(),
+   "copy":$("#copy").val(),
+   "price":$("#price").val(),
+   "date":$("#date").val(),
+   "lan":$("#lan").val()
+  }
+  ];
+  var tbl = $("<table/>").attr("id", "mytable");
+  $("#div1").append(tbl);
+  for (var i = 0; i < details.length; i++) {
+  var tr = "<tr>";
+  var td1 = "<td>" + details[i]["name"] + "</td>";
+  var td3 = "<td>" + details[i]["address"] + "</td>";
+  var td4 = "<td>" + details[i]["zipcode"] + "</td>";
+  var td5 = "<td>" + details[i]["title"] + "</td>";
+  var td6 = "<td>" + details[i]["isbn"]+ "</td>";
+  var td7 = "<td>" + details[i]["copy"] + "</td>";
+  var td8 = "<td>₹" + details[i]["price"]+ "</td>";
+  var td9 = "<td>" + details[i]["date"]+ "</td>";
+  var td10 = "<td>" + details[i]["lan"]+ "</td></tr>";
+  $("#mytable").append(tr + td1 + td3 + td4 + td5 + td6+ td7 + td8+td9+td10);
+  }
+  });
+  }); 

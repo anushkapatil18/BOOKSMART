@@ -201,7 +201,6 @@ h1 {
     position: relative;
 
 }
-
 .slider ul{  
     display: block;
     height: auto;
@@ -213,12 +212,20 @@ h1 {
     float: left;
     position: absolute;
 }
-
 .slider >ul>li>img {
     margin: auto;
     height: 100%;
 }
-
+#mytable{
+  border: 1px black solid;
+  width: 100%;
+}
+#div1{
+  padding-right: 120px;
+  padding-left:120px;
+  padding-bottom: 5%;
+  font-size: 20px;
+}
 .desc {
     position: absolute;
     top: 0;
@@ -249,6 +256,10 @@ h1 {
   background-color: #457b9d;
   font-size: 20px;
   border-radius: 12px;
+  padding: 20px;
+}
+.data{
+  padding-bottom: 50px;
 }
 .title1{
   font-weight: 900;
