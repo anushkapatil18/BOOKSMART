@@ -12,16 +12,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     </head>
-    <body ng-app="myApp" ng-controller="myCtrl">
+    <body ng-app="myApp" ng-controller="myCtrl" >
         <header class="header">
             <nav class="navbar">
                 <a href="#" class="nav-logo">BOOKSMART&nbsp;<i class="fas fa-book-open"></i></a>
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link">Home&nbsp;<i class="fas fa-home"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#books" class="nav-link">Books&nbsp;<i class="fas fa-book"></i></a>
+                        <a href="search.html" class="nav-link" >Search&nbsp;<i class="fas fa-search"></i></a>
                     </li>
                     <li class="nav-item">
                         <a href="#FAQ" class="nav-link">FAQs&nbsp;<i class="fas fa-question-circle"></i></a>
@@ -116,11 +113,8 @@
         </div>
       </div>
     </div>
-    <div class="time">
-      <span>The time is: {{theTime}}</span>
-      </div>
       <h2 id="des">To submit your general and book details click the button</h2>
-      <p><a href="#" class="btn btn-big openmodal">Open Form</a></p><br><br>
+      <p><a href="#" class="btn btn-big openmodal">Open Form</a></p>
       <div class="total">
       <button class="test1 test">Books Title</button>
       <button class="test2 test">Books Authors</button>
@@ -131,9 +125,9 @@
     </div>
 <main>
  <div id="div1">
+   <h4>Your Collection</h4>
   <table id="mytable">
     <tr>
-      <td>Name<hr></td>
       <td>Address<hr></td>
       <td>Zipcode<hr></td>
       <td>Title<hr></td>
@@ -142,6 +136,36 @@
       <td>Price<hr></td>
       <td>Date of Purchase<hr></td>
       <td>Language<hr></td>
+      <tr>
+        <td>xyz colony,Mumbai<hr></td>
+        <td>443789<hr></td>
+        <td>The Waves<hr></td>
+        <td>978-1618953155<hr></td>
+        <td>3<hr></td>
+        <td>365<hr></td>
+        <td>23 Dec 2020<hr></td>
+        <td>English<hr></td>
+        </tr>
+        <tr>
+        <td>xyz colony,Delhi<hr></td>
+        <td>435621<hr></td>
+        <td>One Hundred Years of Solitude<hr></td>
+        <td>978-1480806351<hr></td>
+        <td>5<hr></td>
+        <td>500<hr></td>
+        <td>16 April 2020<hr></td>
+        <td>English<hr></td>
+        <tr>
+        <td>xyz colony,Chennai<hr></td>
+        <td>435623<hr></td>
+        <td>The Wave<hr></td>
+        <td>978-0618260300<hr></td>
+        <td>2<hr></td>
+        <td>650<hr></td>
+        <td>25 May 2021<hr></td>
+        <td>English<hr></td>
+        <tr>
+
     </tr>
   </table>
  </div>

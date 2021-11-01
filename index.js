@@ -149,19 +149,12 @@ $(document).ready(function(){
 });
 
 //angular
-var time = angular.module('myApp', []);
-time.controller('myCtrl', function($scope, $interval) {
- $scope.theTime = new Date().toLocaleTimeString();
- $interval(function () {
- $scope.theTime = new Date().toLocaleTimeString();
-}, 1000);
-});
+
 
 $(document).ready(function () {
   $("#submit").click(function () {
   details = [
   {
-  "name": $("#name").val(),
   "address":$("#address").val(),
   "zipcode":$("#zipcode").val(),
    "title":$("#title").val(),
@@ -176,7 +169,6 @@ $(document).ready(function () {
   $("#div1").append(tbl);
   for (var i = 0; i < details.length; i++) {
   var tr = "<tr>";
-  var td1 = "<td>" + details[i]["name"] + "</td>";
   var td3 = "<td>" + details[i]["address"] + "</td>";
   var td4 = "<td>" + details[i]["zipcode"] + "</td>";
   var td5 = "<td>" + details[i]["title"] + "</td>";
@@ -185,7 +177,8 @@ $(document).ready(function () {
   var td8 = "<td>₹" + details[i]["price"]+ "</td>";
   var td9 = "<td>" + details[i]["date"]+ "</td>";
   var td10 = "<td>" + details[i]["lan"]+ "</td></tr>";
-  $("#mytable").append(tr + td1 + td3 + td4 + td5 + td6+ td7 + td8+td9+td10);
+  $("#mytable").append(tr  + td3 + td4 + td5 + td6+ td7 + td8+td9+td10);
   }
   });
-  }); 
+  });
+  
