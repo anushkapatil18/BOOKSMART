@@ -182,3 +182,34 @@ $(document).ready(function () {
   });
   });
   
+  var options = {
+    key: "rzp_test_nhbnSuLJrApLpf", // Enter the Key ID generated from the Dashboard
+    amount: 2*10000, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    currency: "INR",
+    name: "BOOKSMART",
+    description: "Payment Transaction",
+    image: "2.png",
+    handler: function (data) {
+      alert("Payment Done");
+    },
+    notes: {
+        "address": "Razorpay Corporate Office"
+    },
+    theme: {
+        "color": "#3399cc"
+    }
+};
+var rzp1 = new Razorpay(options);
+rzp1.on('payment.failed', function (response){
+        alert(response.error.code);
+        alert(response.error.description);
+        alert(response.error.source);
+        alert(response.error.step);
+        alert(response.error.reason);
+        alert(response.error.metadata.order_id);
+        alert(response.error.metadata.payment_id);
+});
+document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}

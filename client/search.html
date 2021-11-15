@@ -87,12 +87,12 @@
                var count = 1;
                  $.each(data, function(key, val){
                    if ((val.title.search(regex) != -1) || (val.ISBN.search(regex) != -1)) {
-                     output += '<div class="col-md-6 well">';
+                     output += '<div class="col-md-6 well eidit_box">';
                      output += '<div class="col-md-3"><img class="img-responsive" src="'+val.profile_image+'" alt="'+ val.title+'" /></div>';
                      output += '<div class="col-md-7">';
                      output += '<h5>' + val.title + '</h5>';
                      output += '<p>' + val.ISBN + '</p>'
-                     output += '<a href="info.html">info</a>'
+                     output += '<a href="info.html">Buy</a>'
                      output += '</div>';
                      output += '</div>';
                      if(count%2 == 0){
