@@ -26,6 +26,9 @@
                     <li class="nav-item">
                         <a href="#contact" class="nav-link">Contact Us&nbsp;<i class="fas fa-address-book"></i></a>
                     </li>
+                    <li class="nav-item">
+                      <a href="More.html" class="nav-link"> More&nbsp;<i class="fas fa-info-circle"></i></a>
+                  </li>
                 </ul>
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -63,10 +66,10 @@
               <td>Phone Number:</td><td><input id="phoneno" type="number" maxlength="10"></td>
               </tr>
             <tr>
-            <td>Address:</td><td><input id="address" type="text"></td>
+            <td>Address:</td><td><input id="address" type="text" ng-model="address"></td>
             </tr>
             <tr>
-              <td>ZipCode:</td><td><input id="zipcode" type="number" maxlength="6"></td>
+              <td>ZipCode:</td><td><input id="zipcode" type="number" maxlength="6" ng-model="zip"></td>
               </tr>
             </table>
             </form>
@@ -79,23 +82,23 @@
           <table>
           <tr>
           <td>Title:</td>
-          <td><input name="title" id="title" type="text" maxlength="50" ></td>
+          <td><input name="title" id="title" type="text" maxlength="50" ng-model="title"></td>
           </tr>
           <tr>
           <td>ISBN number:</td>
-          <td><input id="isbn" type="number" maxlength="13" ></td>
+          <td><input id="isbn" type="number" maxlength="13" ng-model="isbn" ></td>
           </tr>
           <tr>
-          <td>Copy:</td><td><input id="copy" type="number" ></td>
+          <td>Copy:</td><td><input id="copy" type="number" ng-model="copy" ></td>
           </tr>
           <tr>
-            <td>Price:</td><td><input id="price" type="number" ></td>
+            <td>Price:</td><td><input id="price" type="number" ng-model="price"></td>
             </tr>
             <tr>
-              <td>Date of purchase:</td><td><input id="date" type="date"></td>
+              <td>Date of purchase:</td><td><input id="date" type="date" ng-model="date"></td>
               </tr>
               <tr>
-                <td>Language:</td><td><select multiple='yes' id="lan">
+                <td>Language:</td><td><select multiple='yes' id="lan" mg-model="lan">
                   <option>English</option>
                   <option>Hindi</option>
                   <option>Marathi</option>
@@ -137,36 +140,15 @@
       <td>Date of Purchase<hr></td>
       <td>Language<hr></td>
       <tr>
-        <td>xyz colony,Mumbai<hr></td>
-        <td>443789<hr></td>
-        <td>The Waves<hr></td>
-        <td>978-1618953155<hr></td>
-        <td>3<hr></td>
-        <td>365<hr></td>
-        <td>23 Dec 2020<hr></td>
-        <td>English<hr></td>
+        <td ng-bind="address"><hr></td>
+        <td ng-bind="zip"><hr></td>
+        <td ng-bing="title"><hr></td>
+        <td ng-bind="isbn"><hr></td>
+        <td ng-bind="cope"><hr></td>
+        <td ng-bind="price"><hr></td>
+        <td ng-bind="date"><hr></td>
+        <td ng-bind="lan"><hr></td>
         </tr>
-        <tr>
-        <td>xyz colony,Delhi<hr></td>
-        <td>435621<hr></td>
-        <td>One Hundred Years of Solitude<hr></td>
-        <td>978-1480806351<hr></td>
-        <td>5<hr></td>
-        <td>500<hr></td>
-        <td>16 April 2020<hr></td>
-        <td>English<hr></td>
-        <tr>
-        <td>xyz colony,Chennai<hr></td>
-        <td>435623<hr></td>
-        <td>The Wave<hr></td>
-        <td>978-0618260300<hr></td>
-        <td>2<hr></td>
-        <td>650<hr></td>
-        <td>25 May 2021<hr></td>
-        <td>English<hr></td>
-        <tr>
-
-    </tr>
   </table>
  </div>
 </main>
