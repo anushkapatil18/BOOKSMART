@@ -67,7 +67,7 @@ Router.get("/book/author/:author", async (req,res) => {
       const updateBookDatabase = await BookModel.findOneAndDelete(
           { ISBN: isbn}
       );
-  
-      return res.json(updateBookDatabase);
+      
+      return res.json({message: 'Book deleted from the database'});
   })
 module.exports = Router;
