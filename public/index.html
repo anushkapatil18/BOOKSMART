@@ -18,9 +18,6 @@
                 <a href="#" class="nav-logo">BOOKSMART&nbsp;<i class="fas fa-book-open"></i></a>
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="search.html" class="nav-link" >Search&nbsp;<i class="fas fa-search"></i></a>
-                    </li>
-                    <li class="nav-item">
                         <a href="#FAQ" class="nav-link">FAQs&nbsp;<i class="fas fa-question-circle"></i></a>
                     </li>
                     <li class="nav-item">
@@ -29,6 +26,9 @@
                     <li class="nav-item">
                       <a href="More.html" class="nav-link"> More&nbsp;<i class="fas fa-info-circle"></i></a>
                   </li>
+                  <li class="nav-item">
+                    <a href="http://localhost:3000/" class="nav-link"> Login&nbsp;<i class="fas fa-sign-in-alt"></i></a>
+                </li>
                 </ul>
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -37,87 +37,7 @@
                 </div>
             </nav>
     </header>
-    <div class="modal" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-header">
-          <h2>General details</h2>
-          <a href="#" class="btn-close closemodal" aria-hidden="true">&times;</a>
-        </div>
-        <div class="modal-body">
-            <form id="form">
-            <table>
-            <tr>
-            <td>Full Name:</td>
-            <td><input name="name" id="name" type="text" maxlength="30" ></td>
-            </tr>
-            <tr>
-            <td>E-Mail ID:</td>
-            <td><input id="email" type="email"></td>
-            </tr>
-            <tr>
-            <td>Date of Birth:</td>
-            <td><input id="dob" type="date"></td>
-            </tr>
-            <tr>
-            <td>Age:</td>
-            <td><input id="age" type="number" ></td>
-            </tr>
-            <tr>
-              <td>Phone Number:</td><td><input id="phoneno" type="number" maxlength="10"></td>
-              </tr>
-            <tr>
-            <td>Address:</td><td><input id="address" type="text" ng-model="address"></td>
-            </tr>
-            <tr>
-              <td>ZipCode:</td><td><input id="zipcode" type="number" maxlength="6" ng-model="zip"></td>
-              </tr>
-            </table>
-            </form>
-        </div>
-        <div class="modal-header">
-          <h2>Book details</h2>
-        </div>
-        <div class="modal-body">
-          <form id="form">
-          <table>
-          <tr>
-          <td>Title:</td>
-          <td><input name="title" id="title" type="text" maxlength="50" ng-model="title"></td>
-          </tr>
-          <tr>
-          <td>ISBN number:</td>
-          <td><input id="isbn" type="number" maxlength="13" ng-model="isbn" ></td>
-          </tr>
-          <tr>
-          <td>Copy:</td><td><input id="copy" type="number" ng-model="copy" ></td>
-          </tr>
-          <tr>
-            <td>Price:</td><td><input id="price" type="number" ng-model="price"></td>
-            </tr>
-            <tr>
-              <td>Date of purchase:</td><td><input id="date" type="date" ng-model="date"></td>
-              </tr>
-              <tr>
-                <td>Language:</td><td><select multiple='yes' id="lan" mg-model="lan">
-                  <option>English</option>
-                  <option>Hindi</option>
-                  <option>Marathi</option>
-                  <option>Sanskrit</option>
-                  <option>French</option>
-                  <option>Spanish</option>
-                  <option>Others</option>
-                </select></td>
-                </tr>
-          </table>
-          </form>
-      </div>
-        <div class="modal-footer">
-          <a href="#" class="btn closemodal" id="submit">Submit</a>
-        </div>
-      </div>
-    </div>
-      <h2 id="des">To submit your general and book details click the button</h2>
-      <p><a href="#" class="btn btn-big openmodal">Open Form</a></p>
+    <h1>Some of our suggestions!</h1>
       <div class="total">
       <button class="test1 test">Books Title</button>
       <button class="test2 test">Books Authors</button>
@@ -126,33 +46,7 @@
     <div class="data">
       <div id="txt"></div>
     </div>
-<main>
- <div id="div1">
-   <h4>Your Collection</h4>
-  <table id="mytable">
-    <tr>
-      <td>Address<hr></td>
-      <td>Zipcode<hr></td>
-      <td>Title<hr></td>
-      <td>ISBN no<hr></td>
-      <td>Copies<hr></td>
-      <td>Price<hr></td>
-      <td>Date of Purchase<hr></td>
-      <td>Language<hr></td>
-      <tr>
-        <td ng-bind="address"><hr></td>
-        <td ng-bind="zip"><hr></td>
-        <td ng-bing="title"><hr></td>
-        <td ng-bind="isbn"><hr></td>
-        <td ng-bind="cope"><hr></td>
-        <td ng-bind="price"><hr></td>
-        <td ng-bind="date"><hr></td>
-        <td ng-bind="lan"><hr></td>
-        </tr>
-  </table>
- </div>
-</main>
-<div class="slider"></div>
+
 <br><br>
     <h1>FAQ</h1>
 <div id="FAQ" class="accordion">
@@ -209,6 +103,7 @@
 <br>
 <br>
 <br>
+<div class="slider"></div>
 <br>
 <footer class="footer" id="footer">
     <div id="contact" class="container">

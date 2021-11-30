@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>BOOKSMART</title>
+    <script>
+        function fun(){
+            var sta = document.getElementById("status");
+            if(sta.val() == true){
+                alert("Saved sucessfully :)");
+            }
+        }
+        function dfun(){
+            alert("Deleted sucessfully :)");
+        }
+        function euserStoriesfun(){
+            alert("Edited sucessfully :)");
+        }
+        
+        
+    </script>
+</head>
+
+<body ng-app="">
+    {{> _header}}
+    {{> _add_btn}}
+    <div class="container">
+        {{{body}}}
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.14.1/ckeditor.js" integrity="sha256-bEIQpI72w9NJuIVhTLFUF2/8uxl0u5800r8ddViuv+o=" crossorigin="anonymous"></script>
+
+    <script>
+        M.Sidenav.init(document.querySelector('.sidenav'))
+        M.FormSelect.init(document.querySelector('#status'))
+
+        CKEDITOR.replace('body', {
+            plugins: 'wysiwygarea, toolbar, basicstyles, link'
+        })
+    </script>
+     
+
+    <footer class="footer" id="footer">
+    <div id="contact" class="container">
+        <div class="row">
+            <div class="footer-item">
+                <h3><b>Location</b></h3>
+                <p>ABC Street, Bulding 10, <br> Navi Mumbai - 400001</p>
+            </div>
+            <div class="footer-item">
+                <h3><b>Working Hours</b></h3>
+                <p>Monday To Sunday<br> 7:00 AM - 4:00 PM</p>
+            </div>
+            <div class="footer-item">
+                <h3><b>Contact Us</b></h3>
+                <p>91 1234 123 ***</p>
+                <p>book_fair@gmail.com</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+</footer>
+</body>
+
+</html>

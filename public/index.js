@@ -44,7 +44,7 @@ $('.closemodal').click(function (e) {
   $('.modal').removeClass('opened');
 });
 
-//JSON
+//JSON + Jquery
 $(function(){
   var json = {
       "slider":[{
@@ -103,7 +103,7 @@ var j = 0;
 
 });
 
-//ajax
+//ajax with JSON
 var x="";
 $(document).ready(function(){
   $(".test1").click(function(){
@@ -139,7 +139,6 @@ $(document).ready(function(){
     });
   });
 });
-
 
 
 
